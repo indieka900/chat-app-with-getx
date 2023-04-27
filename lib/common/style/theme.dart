@@ -7,6 +7,7 @@ class AppTheme {
   static const radius = 10.0;
 
   static ThemeData light = ThemeData(
+    useMaterial3: true,
     brightness: Brightness.light,
     scaffoldBackgroundColor: AppColor.scaffoldBackground,
     splashColor: Colors.transparent,
@@ -15,7 +16,7 @@ class AppTheme {
     colorScheme: ColorScheme.fromSwatch().copyWith(
       secondary: AppColor.accentColor,
     ),
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       elevation: 0,
       centerTitle: true,
       backgroundColor: Colors.white,
@@ -33,14 +34,14 @@ class AppTheme {
         fontWeight: FontWeight.w500,
       ),
     ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: AppColor.scaffoldBackground,
       unselectedLabelStyle: TextStyle(fontSize: 12),
       selectedLabelStyle: TextStyle(fontSize: 12),
       unselectedItemColor: Color(0xffA2A5B9),
       selectedItemColor: AppColor.accentColor,
     ),
-    tabBarTheme: TabBarTheme(
+    tabBarTheme: const TabBarTheme(
       indicatorSize: TabBarIndicatorSize.label,
       labelColor: AppColor.accentColor,
       unselectedLabelColor: AppColor.secondaryText,

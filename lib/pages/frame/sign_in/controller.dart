@@ -1,6 +1,7 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:chatty/common/entities/entities.dart';
+import 'package:chatty/common/routes/routes.dart';
 import 'package:chatty/pages/frame/sign_in/index.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
@@ -32,6 +33,7 @@ class SignInController extends GetxController {
           loginPanelListEntity.email = email;
           loginPanelListEntity.open_id = id;
           loginPanelListEntity.type = 1;
+          asyncPostAllData();
         }
       } else {}
     } catch (e) {
@@ -39,5 +41,10 @@ class SignInController extends GetxController {
         print('....Error $e occured');
       }
     }
+  }
+
+  asyncPostAllData() {
+    print('...../lets go');
+    Get.offAll(AppRoutes.Message);
   }
 }
